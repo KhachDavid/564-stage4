@@ -2,8 +2,6 @@
     "files.associations": {
         "*.rmd": "markdown",
         "*.r": "r",
-        "buf.C": "cpp",
-        "heapfile.C": "cpp",
-        "testfile.C": "cpp"
+        "heapfile.C": "cpp"
     }
 }
