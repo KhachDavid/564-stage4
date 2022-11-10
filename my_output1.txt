@@ -1,0 +1,10 @@
+Testing the relation interface
+
+db.destroy. unlink returned error
+
+insert 10120 records into dummy.02
+
+Start an insert scan which will have the side effect of opening dummy.02 
+opening file dummy.02
+got err0r status return from insertrecord
+inserted 0 records into file dummy1 before error 

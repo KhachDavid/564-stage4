@@ -1,0 +1,2 @@
+g++ -g -o runCode buf.c bufHash.c db.c error.c heapfile.c page.c testfile.c -Wall
+./runCode > my_output1.txt
