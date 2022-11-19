@@ -17,18 +17,18 @@ const Status createHeapFile(const string fileName)
     {
 		// file doesn't exist. First create it and allocate
 		// an empty header page and data page.
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+        status = db.createFile(fileName);
+        status = db.openFile(fileName, file);
+        status = bufMgr->allocPage(file,hdrPageNo,newPage);
+        hdrPage =  (FileHdrPage*) newPage;
+        status = bufMgr->allocPage(file,  newPageNo, newPage);
+        newPage->init(newPageNo);
+        hdrPage->firstPage = newPageNo;
+        hdrPage->lastPage  = newPageNo;
+
+        // unpin and set pages to dirty
+        status = bufMgr->unPinPage(file, hdrPageNo, true);
+        status = bufMgr->unPinPage(file, newPageNo, true);
 		
     }
     return (FILEEXISTS);
